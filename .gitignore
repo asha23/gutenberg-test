@@ -7,7 +7,6 @@ sassdoc
 content/upgrade
 content/uploads
 content/plugins
-content/themes
 wp
 .DS_Store
 .sass-cache
