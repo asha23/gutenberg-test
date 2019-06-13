@@ -1,0 +1,25 @@
+// Bootstrap
+
+@import "bootstrap/bootstrap";
+
+// Fontawesome
+
+$fa-font-path: "../fonts";
+@import "./node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
+@import "./node_modules/@fortawesome/fontawesome-free/scss/solid";
+@import "./node_modules/@fortawesome/fontawesome-free/scss/regular";
+@import "./node_modules/@fortawesome/fontawesome-free/scss/brands";
+
+
+// Theme specific
+
+@import "core/globals/colours";
+@import "core/globals/globals";
+@import "core/mixins";
+@import "core/globals/typography";
+
+
+
+
+
+
