@@ -1,0 +1,68 @@
+{
+    "name": "asha23/arlo-framework-webpack",
+    "type": "project",
+    "license": "MIT",
+    "description": "A Composer Framework to help you get WordPress up and running in around a minute",
+    "authors": [{
+        "name": "Ash Whiting",
+        "email": "ash_whiting@hotmail.com"
+    }],
+    "keywords": [
+        "wordpress theme framework", "base theme", "wordpress", "composer", "webpack", "gulp","vagrant", "wp"
+    ],
+    "repositories": {
+        "wp-packagist": {
+            "type": "composer",
+            "url": "https://wpackagist.org"
+        },
+        "theme": {
+            "type": "package",
+            "package": {
+                "name": "asha23/arlo-framework-webpack-seed",
+                "type": "wordpress-theme",
+                "version": "0.2.3",
+                "dist": {
+                    "type": "zip",
+                    "url": "https://github.com/asha23/arlo-framework-webpack-seed/archive/0.2.3.zip"
+                }
+            }
+		},
+		"wp-sync-db": {
+			"type": "package",
+			"package": {
+				"name": "wp-sync-db/wp-sync-db",
+				"type": "wordpress-plugin",
+				"version": "1.6",
+				"dist": {
+					"type": "zip",
+					"url": "https://github.com/corysimmons/wp-sync-db/archive/1.6.zip"
+				}
+			}
+        }
+    },
+    "require": {
+        "php": ">=7.1",
+        "composer/installers": "~1.0.12",
+        "johnpbloch/wordpress": "*",
+	    "vlucas/phpdotenv": "^2.0.1",
+	    "oscarotero/env": "^1.0",
+        "wpackagist-plugin/tinymce-advanced": "*",
+        "wpackagist-plugin/acf-content-analysis-for-yoast-seo": "*",
+        "wpackagist-plugin/duplicate-post": "*",
+        "wpackagist-plugin/simple-image-sizes": "*",
+        "wpackagist-plugin/wordpress-seo": "*",
+        "wpackagist-plugin/wps-hide-login": "*",
+        "wpackagist-plugin/disable-gutenberg":"*",
+        "wp-sync-db/wp-sync-db": "*",
+        "wpackagist-plugin/wordfence": "*",
+        "asha23/arlo-framework-webpack-seed": "*"
+    },
+    "extra": {
+        "installer-paths": {
+            "web/content/plugins/{$name}/": ["type:wordpress-plugin"],
+            "web/content/themes/{$name}/": ["type:wordpress-theme"]
+        },
+        "wordpress-install-dir": "web/wp",
+        "content-install-dir": "web/content"
+    }
+}
